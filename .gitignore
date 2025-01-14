@@ -128,13 +128,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+Semantic_Search_v2.0_env/
 
 # Spyder project settings
 .spyderproject
@@ -169,3 +163,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# Data Files
+data/
