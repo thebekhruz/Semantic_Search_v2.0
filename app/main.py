@@ -4,7 +4,7 @@ import numpy as np
 import streamlit as st
 
 from models.embedding import EmbeddingModel
-from services.search import SemanticSearchApp
+from services.SearchApp import SemanticSearchApp
 from database.neo4j_driver import Neo4jDatabase
 from UI.home import SearchUI
 
