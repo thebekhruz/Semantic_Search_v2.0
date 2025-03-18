@@ -37,6 +37,6 @@ class SemanticSearchApp:
         list: A list of search results.
         """
         query_embedding = self.embed_model.get_embedding(query)
-        entities = self.get_named_entities(query)
+        # entities = self.get_named_entities(query) # will perform this inside the UI
         results = self.db.search_documents(entities, query_embedding)
         return results

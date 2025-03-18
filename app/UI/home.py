@@ -7,9 +7,16 @@ class SearchUI:
         st.title("Semantic Search with Neo4j")
         query = st.text_input("Enter your search query:")
         if query:
-            entities = []  # Placeholder for entity extraction if needed
+            entities =  self.search_app.get_named_entities(query)
             results = self.search_app.search(query, entities)
-            
+
+            # Show the named entities (if any)
+            if entities:
+                st.subheader("Named Entities Extracted From Your Query")
+                st.write(", ".join(entities))
+            else:
+                st.write("No named entities extracted.")
+
             if results:
                 st.subheader("Search Results")
                 
